@@ -40,7 +40,7 @@
         <p> Bienvenido!. Este proyecto es  fruto de un equipo con visión 
           y compromiso, listo para usar su poder tecnológico en favor del planeta, 
           demostrando que pueden ir de la mano.</p>
-        <a href="#" class="btn-1">Información</a>
+        
       </div>
       <div class="header-img">
         <img src="imagenes/LogoChuas.png" alt="logo chuas">
@@ -131,7 +131,7 @@
         <div class="carrusel-box">
           <button class="flecha izquierda" onclick="moverCarrusel('carrusel1', -1)">&#10094;</button>
           <div class="carrusel" id="carrusel1">
-            <img src="imagenes/chuas1.jpg" alt="">
+            
             <img src="imagenes/chuas2.jpg" alt="">
             <img src="imagenes/chuas3.jpg" alt="">
             <img src="imagenes/chuas4.jpg" alt="">
@@ -149,10 +149,10 @@
         <div class="carrusel-box">
           <button class="flecha izquierda" onclick="moverCarrusel('carrusel2', -1)">&#10094;</button>
           <div class="carrusel" id="carrusel2">
-            <img src="imagenes/ap1.jpg" alt="">
-            <img src="imagenes/ap2.jpg" alt="">
-            <img src="imagenes/ap3.jpg" alt="">
-            <img src="imagenes/ap4.jpg" alt="">
+            <img src="imagenes/aplicacion_chuas_1_1.png" alt="">
+            <img src="imagenes/aplicacion_chuas_1_2.png" alt="">
+            <img src="imagenes/aplicacion_chuas_1_3.png" alt="">
+            
           </div>
           <button class="flecha derecha" onclick="moverCarrusel('carrusel2', 1)">&#10095;</button>
         </div>
@@ -174,13 +174,13 @@
             <h3>Alfonso Auquilla</h3>
             <p>17 AÑOS</p>
             <p>ESPECIALIDAD: INFORMÁTICA</p>
-            <img class="fotos" src="imagenes/Captura de pantalla 2025-05-07 001734.png" alt="Alfonso Auquilla">
+            <img class="fotos" src="imagenes/AlfonsoAuquilla.png" alt="Alfonso Auquilla">
           </div>
           <div class="tarjeta">
             <h3>Barbara Sarmiento</h3>
             <p>17 AÑOS</p>
             <p>ESPECIALIDAD: INFORMÁTICA</p>
-            <img class="fotos" src="imagenes/Captura de pantalla 2025-05-07 001835.png" alt="Barbara Sarmiento">
+            <img class="fotos" src="imagenes/Barbara.png" alt="Barbara Sarmiento">
           </div>
           <div class="tarjeta">
             <h3>Dayanara Calle</h3>
@@ -217,7 +217,7 @@
     </div>
   </section>
   <footer style="background-color: #000; color: white; text-align: center; padding: 20px; font-family: Arial, sans-serif;">
-    Alfonso Auquilla - Barbara Sarmiento - Dayanara Calle
+    Unidad Educativa Tecnico Salesiano
   </footer>
   
   
@@ -242,6 +242,19 @@
       carrusel.style.transform = `translateX(-${indices[id] * ancho}px)`;
     }
   </script>
+  <script>
+    // Animaciones al hacer scroll
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    scrollElements.forEach(el => observer.observe(el));
+    </script>
   </body>
   </html>
   
