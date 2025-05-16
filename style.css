@@ -810,7 +810,7 @@ body {
 }
 
 .contenido-container p {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.1rem;
     line-height: 1.8;
 }
@@ -818,9 +818,18 @@ body {
 /* ===== APLICACIÓN SECTION ===== */
 .aplicacion {
     padding: 120px 5%;
-    background: linear-gradient(135deg, #000000 0%, #0a1f12 100%);
+    background: #ffffff; /* Fondo blanco sólido */
     text-align: center;
     position: relative;
+}
+
+.app-container h2 {
+    color: #000; /* Cambiado de #fff a #000 */
+}
+
+.paso {
+    color: #333; /* Cambiado de #fff a #333 */
+    background: rgba(0,0,0,0.05); /* Fondo más claro para los pasos */
 }
 
 .app-container {
@@ -830,15 +839,7 @@ body {
     z-index: 1;
 }
 
-.app-container h2 {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 60px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-}
+
 
 .app-container h2::after {
     content: '';
@@ -848,7 +849,7 @@ body {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: linear-gradient(to right, #56cc85, transparent, #56cc85);
+    background: linear-gradient(to righAt, #56cc85, transparent, #56cc85);
 }
 
 .qr-placeholder {
@@ -891,20 +892,7 @@ body {
     margin: 0 auto;
 }
 
-.paso {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    font-size: 1.1rem;
-    color: #fff;
-    text-align: left;
-    transition: all 0.5s ease;
-    border: 1px solid rgba(86, 204, 133, 0.1);
-    position: relative;
-    overflow: hidden;
-}
+
 
 .paso::before {
     content: '';
@@ -1117,3 +1105,4 @@ footer::before {
 input[type="checkbox"] {
     display: none;
   }
+  
