@@ -7,6 +7,10 @@
     font-weight: normal;
     font-style: normal;
 }
+.head-txt h1,h2,h3 {
+    font-family: 'Jambo', sans-serif;
+    /* Mantén el resto de tus estilos (gradiente, etc.) */
+}
 
 * {
     margin: 0;
@@ -741,8 +745,7 @@ body {
 
 /* ===== INFORME SECTION ===== */
 .informe {
-    background: url('imagenes/gifescaner.gif') no-repeat center center fixed;
-    background-size: cover;
+    background: #000000; /* Fondo negro sólido */
     padding: 150px 5%;
     display: flex;
     justify-content: center;
